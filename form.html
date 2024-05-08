@@ -1,0 +1,87 @@
+<html>
+	<head>
+		
+		<title>saif</title>
+		<style>
+		body {
+            	margin: 0;
+            	padding: 0;
+            	display: flex;
+            	align-items: center;
+            	justify-content: center;
+            	height: 120vh;
+        	}
+		.dsv {
+			padding: 20px;
+			border-radius: 15px;
+			border:1px solid blue;
+		}
+		.iinput {
+			width:100%;
+			padding:10px;
+			margin:8px 0;
+			}
+		button {width:100%;
+			background-color: #4caf50;
+            		color: white;
+			padding:10px;
+			border-radius: 4px;
+			}
+		
+		</style>
+	
+	</head>
+	<body class='body'>
+		<div class="dsv">
+        		<h2>Fill Form</h2>
+        		<form action="dbms_project.php" method="post" name ='myform' id='myform'>
+            		
+                	<label for="Name">Name</label>
+                	<input class ="iinput" type="text" id="name" name="name" required><br>
+
+			<label for="age">Age:</label>
+			<input class='iinput' type = 'text' id = 'age' name = "age" required><br>
+
+			<label for="address">Address:</label>
+			<input class='iinput' type = 'text' id = 'address' name = "address" required><br>
+
+			<label for="sub">Fav.Subject:</label>
+			<input class='iinput' type = 'text' id = 'sub' name = "sub" required><br>
+			<label for="gender">Gender:</label><br>
+			<label for="gender">Male</label>
+			<input type = "radio"  id ="male" value="male" name="gender" required>
+
+			<label for="gender">Female</label>
+			<input type = "radio"  id ="option2" value="female" name="gender" required><br><br>
+			
+			<label for="password">Password:</label>
+                        <input class ="iinput" type="password" id="password" name="password" onclick = "valid()" required ><br>
+			
+			<label><input type="checkbox" onclick="show()">Show Password</label><br><br>
+
+			<button  type="submit" onclick ="submit()">Submit</button>
+
+			
+			
+                
+                	
+		</div>
+		<script>
+			function valid(){
+				var pas = document.getElementById("password").value;
+				if (pas.length>8){
+					alert("Password si valid");
+				}
+				else{
+					alert("Password's length must be 8 or more character");
+				}
+			}
+			function submit(){
+				var g =document.getElementById("name").value;
+				document.write(g);
+			}
+			
+		</script>
+		
+	</body>
+</html>
